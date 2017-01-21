@@ -13,8 +13,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
+  s.test_files    = `git ls-files -- {test}/*`.split("\n")
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency 'omniauth-oauth2', '~> 1.2'
