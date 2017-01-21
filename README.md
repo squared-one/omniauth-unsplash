@@ -41,8 +41,16 @@ In your `Devise.setup` block (in `config/initializers/devise.rb`) do:
 config.omniauth :unsplash,
                 ENV['UNSPLASH_APPLICATION_ID'],
                 ENV['UNSPLASH_APPLICATION_SECRET'],
+                # public is used if left blank
                 scope: 'public read_user',
                 strategy_class: OmniAuth::Strategies::Unsplash
+                
+And don't forget to add something like
+
+    YOUR_HOST/users/auth/unsplash/callback 
+
+to your Callback URL in the Unsplash settings.
+                
 ```
 
 ## Development
