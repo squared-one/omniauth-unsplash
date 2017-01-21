@@ -31,9 +31,9 @@ use OmniAuth::Builder do
            ENV['GITHUB_APPLICATION_SECRET'],
            scope: 'public read_user'
 end
-```    
+```
     
-### Rails / Devise    
+### Devise (Rails)
 
 In your `Devise.setup` block (in `config/initializers/devise.rb`) do:
 
