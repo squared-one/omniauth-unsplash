@@ -22,7 +22,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Plain usage without Rails:    
+
+    use OmniAuth::Builder do
+      provider :unsplash, 
+               ENV['UNSPLASH_APPLICATION_ID'], 
+               ENV['GITHUB_APPLICATION_SECRET'],
+               scope: 'public read_user'
+    end
+    
+### Rails / Devise    
+
+In your `Devise.setup` block (in `config/initializers/devise.rb`) do:
+
+    config.omniauth :unsplash,
+                    ENV['UNSPLASH_APPLICATION_ID'],
+                    ENV['UNSPLASH_APPLICATION_SECRET'],
+                    scope: 'public read_user',
+                    strategy_class: OmniAuth::Strategies::Unsplash
 
 ## Development
 
@@ -32,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/omniauth-unsplash. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/squared-one/omniauth-unsplash. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
