@@ -1,8 +1,8 @@
 # Omniauth::Unsplash
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/omniauth/unsplash`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is an official OmniAuth strategy for authenticating to Unsplash. To
+use it, you'll need to sign up for an OAuth2 Application ID and Secret
+on the [Unsplash Applications Page](https://unsplash.com/oauth/applications).
 
 ## Installation
 
@@ -24,22 +24,26 @@ Or install it yourself as:
 
 Plain usage without Rails:    
 
-    use OmniAuth::Builder do
-      provider :unsplash, 
-               ENV['UNSPLASH_APPLICATION_ID'], 
-               ENV['GITHUB_APPLICATION_SECRET'],
-               scope: 'public read_user'
-    end
+```ruby
+use OmniAuth::Builder do
+  provider :unsplash, 
+           ENV['UNSPLASH_APPLICATION_ID'], 
+           ENV['GITHUB_APPLICATION_SECRET'],
+           scope: 'public read_user'
+end
+```    
     
 ### Rails / Devise    
 
 In your `Devise.setup` block (in `config/initializers/devise.rb`) do:
 
-    config.omniauth :unsplash,
-                    ENV['UNSPLASH_APPLICATION_ID'],
-                    ENV['UNSPLASH_APPLICATION_SECRET'],
-                    scope: 'public read_user',
-                    strategy_class: OmniAuth::Strategies::Unsplash
+```ruby
+config.omniauth :unsplash,
+                ENV['UNSPLASH_APPLICATION_ID'],
+                ENV['UNSPLASH_APPLICATION_SECRET'],
+                scope: 'public read_user',
+                strategy_class: OmniAuth::Strategies::Unsplash
+```
 
 ## Development
 
