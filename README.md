@@ -1,6 +1,6 @@
 # Omniauth::Unsplash
 
-This is an official OmniAuth strategy for authenticating to Unsplash. To
+This is an UNofficial OmniAuth strategy for authenticating to Unsplash. To
 use it, you'll need to sign up for an OAuth2 Application ID and Secret
 on the [Unsplash Applications Page](https://unsplash.com/oauth/applications).
 
