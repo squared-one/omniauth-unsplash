@@ -4,7 +4,7 @@ This is an UNofficial OmniAuth strategy for authenticating to Unsplash. To
 use it, you'll need to sign up for an OAuth2 Application ID and Application Secret
 on the [Unsplash Applications Page](https://unsplash.com/oauth/applications). 
 Please note that it is in alpha stage yet. It is used by the author but not covered 
-by automatic tests tests.
+by automatic tests.
 
 ## Installation
 
