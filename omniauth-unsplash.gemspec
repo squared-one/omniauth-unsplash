@@ -1,10 +1,9 @@
 # coding: utf-8
-$:.push File.expand_path('../lib', __FILE__)
-require 'omniauth/unsplash/version'
+require File.expand_path('../lib/omniauth/unsplash/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name          = "omniauth-unsplash"
-  s.version       = Omniauth::Unsplash::VERSION
+  s.version       = OmniAuth::Unsplash::VERSION
   s.authors       = ["Jakub Hozak"]
   s.email         = ["jakub.hozak@gmail.com"]
 
