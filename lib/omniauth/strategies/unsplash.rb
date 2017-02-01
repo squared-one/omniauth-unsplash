@@ -36,10 +36,10 @@ module OmniAuth
           (full_host + script_name + callback_path)
 
         if options[:force_ssl]
-          url.sub /^http:/, 'https'
+          url = url.sub /^http:/, 'https:'
+        else
+          url
         end
-        
-        url
       end
 
       def authorize_params
