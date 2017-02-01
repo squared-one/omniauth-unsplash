@@ -1,4 +1,6 @@
-# Omniauth::Unsplash
+# Omniauth - Unsplash
+
+[![Gem Version](https://badge.fury.io/rb/omniauth-unsplash.svg)](https://badge.fury.io/rb/omniauth-unsplash)
 
 This is an UNofficial OmniAuth strategy for authenticating to Unsplash. To
 use it, you'll need to sign up for an OAuth2 Application ID and Application Secret

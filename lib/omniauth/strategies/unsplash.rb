@@ -49,7 +49,14 @@ module OmniAuth
       end
 
       def raw_info
-        JSON.parse(access_token.get('/me').body)
+        if options[:extra_data]
+          JSON.parse(access_token.get('/me').body)
+        else
+          {}
+        end
+        # TODO: catch correct RateLimiting exception
+        # rescue JSON::ParseError
+        #   {}
       end
     end
   end
