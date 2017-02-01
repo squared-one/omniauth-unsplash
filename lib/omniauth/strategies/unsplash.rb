@@ -32,8 +32,14 @@ module OmniAuth
       end
 
       def callback_url
-        options[:callback_url] ||
+        url = options[:callback_url] ||
           (full_host + script_name + callback_path)
+
+        if options[:force_ssl]
+          url.sub /^http:/, 'https'
+        end
+        
+        url
       end
 
       def authorize_params
