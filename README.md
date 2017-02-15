@@ -73,3 +73,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/square
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+## Credits
+
+Developed as a part of https://www.squared.one/art-prints effort!
